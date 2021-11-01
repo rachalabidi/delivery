@@ -6,7 +6,10 @@ $('.menu-toggle').click(function(){
 // JavaScript Document
 // navigation code for horizontal gallery of related content in more details view
 
-var showcase=document.getElementById("showcase"),
+// JavaScript Document
+// navigation code for horizontal gallery of related content in more details view
+
+let showcase=document.getElementById("showcase"),
 	left=document.getElementById("rc-left"),
 	right=document.getElementById("rc-right"),
 	liNum=showcase.getElementsByTagName("li").length,
@@ -47,4 +50,27 @@ right.addEventListener("click",function(){
 	}
 });
 
+$(document).ready(function() {
+
+	// Define flickity carousel
+	var $gallery = $('.gallery').flickity({
+	  imagesLoaded: true,
+	  percentPosition: false,
+	  wrapAround: true,
+	  pageDots: false
+	});
+  
+	var flkty = $gallery.data('flickity');
+  
+	$gallery.on('staticClick', function(event, pointer, cellElement, cellIndex) {
+	  // Do nothing if cell was not clicked
+	  if (!cellElement) {
+		return;
+	  }
+	  // Find image url and use it to tell Fancybox what to target
+	  var $zoomurl = $(cellElement).find('img').attr('src');
+	  $.fancybox($zoomurl);
+	});
+  
+  });
 

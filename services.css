@@ -121,9 +121,14 @@ P{
     text-decoration: underline;
 }
 
-h5{
+.m{
   color: #B076B9;
   margin: 0px 40px ;
+}
+.w{
+  color: white;
+  margin: 0px 40px ;
+  text-decoration: none;
 }
 
 #relatedContent {
@@ -165,6 +170,21 @@ h5{
 	float:left;
 	margin: 80px 10px;
 }
+
+.sOne{
+  background-color: white;
+ 
+}
+
+.gallery img {
+  height: 400px;
+  margin-right: 5px;
+}
+
+
+
+
+
 
 
 
